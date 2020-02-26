@@ -81,7 +81,7 @@
   },
   "template": "blankscrollable",
   "attributes": {
-    "portalUrl": "https://prof-services.maps.arcgis.com"
+    "portalUrl": "https://arcgis.com"
   },
   "themeManifest": {
     "name": "default",
