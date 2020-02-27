@@ -301,7 +301,7 @@
       "label": "Text 1",
       "config": {
         "text": "<p><span style=\"font-size: 20px;\">Get Map Coordinates</span></p>",
-        "placeholder": "Double click to edit text",
+        "placeholder": "Double click to edit text.",
         "style": {
           "verticalAlign": "start",
           "wrap": true
