@@ -262,14 +262,21 @@
           "canHome": true,
           "canSearch": true
         },
-        "isUseCustomMapState": false
+        "isUseCustomMapState": false,
+        "initialMapDataSourceID": "dataSource_1",
+        "initialMapState": null
       },
       "id": "widget_3",
       "layouts": {
         "MapFixedLayout": {
           "LARGE": "layout_2"
         }
-      }
+      },
+      "useDataSources": [
+        {
+          "dataSourceId": "dataSource_1"
+        }
+      ]
     },
     "widget_4": {
       "id": "widget_4",
@@ -314,7 +321,14 @@
   "views": {},
   "sections": {},
   "dialogs": {},
-  "dataSources": {},
+  "dataSources": {
+    "dataSource_1": {
+      "type": "WEB_MAP",
+      "itemId": "41281c51f9de45edaf1c8ed44bb10e30",
+      "id": "dataSource_1",
+      "label": "LA Parks and Trails Map (styled with popups)"
+    }
+  },
   "messageConfigs": {},
   "pageStructure": [
     {
