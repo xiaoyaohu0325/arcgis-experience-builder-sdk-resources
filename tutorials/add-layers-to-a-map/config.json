@@ -19,8 +19,8 @@
         "0": {
           "type": "WIDGET",
           "bbox": {
-            "left": "-134px",
-            "top": "-164px",
+            "left": "168px",
+            "top": "-155px",
             "width": "800px",
             "height": 520
           },
@@ -46,7 +46,7 @@
           "type": "WIDGET",
           "bbox": {
             "left": 0,
-            "width": 2,
+            "width": 3,
             "height": "590px"
           },
           "widgetId": "widget_4",
@@ -58,8 +58,8 @@
         "1": {
           "type": "WIDGET",
           "bbox": {
-            "left": 2,
-            "width": 10,
+            "left": 3,
+            "width": 9,
             "height": 400
           },
           "widgetId": "widget_3",
@@ -83,8 +83,8 @@
         "0": {
           "type": "WIDGET",
           "bbox": {
-            "left": "-128px",
-            "top": "-29px",
+            "left": "9px",
+            "top": "-12px",
             "width": "360px",
             "height": "70px"
           },
@@ -94,8 +94,8 @@
           "widgetId": "widget_2",
           "type": "WIDGET",
           "bbox": {
-            "left": "-128px",
-            "top": "-29px",
+            "left": "9px",
+            "top": "-12px",
             "width": "360px",
             "height": "70px"
           }
@@ -243,9 +243,9 @@
       }
     },
     "widget_2": {
-      "uri": "widgets/AddLayers/",
+      "uri": "widgets/add-layers/",
       "version": "1.0.0",
-      "label": "AddLayers 1",
+      "label": "add-layers 1",
       "config": {},
       "id": "widget_2",
       "useMapWidgetIds": [
@@ -326,7 +326,7 @@
       "type": "WEB_MAP",
       "itemId": "41281c51f9de45edaf1c8ed44bb10e30",
       "id": "dataSource_1",
-      "label": "LA Parks and Trails Map (styled with popups)"
+      "label": "LA Parks and Trails Map (styled with popups)",
     }
   },
   "messageConfigs": {},

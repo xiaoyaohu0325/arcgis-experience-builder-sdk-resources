@@ -1,5 +1,5 @@
 {
-  "name": "AddLayers",
+  "name": "add-layers",
   "type": "widget",
   "version": "1.0.0",
   "dependency": "jimu-arcgis",
