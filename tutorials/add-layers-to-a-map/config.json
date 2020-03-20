@@ -19,10 +19,10 @@
         "0": {
           "type": "WIDGET",
           "bbox": {
-            "left": "168px",
-            "top": "-155px",
-            "width": "800px",
-            "height": 520
+            "left": "472px",
+            "top": "-47px",
+            "width": "400px",
+            "height": 420
           },
           "widgetId": "widget_1",
           "setting": {
@@ -38,33 +38,34 @@
       "type": "ROW",
       "label": "Default",
       "order": [
-        "0",
-        "1"
+        "1",
+        "0"
       ],
       "content": {
         "0": {
           "type": "WIDGET",
           "bbox": {
-            "left": 0,
-            "width": 3,
-            "height": "590px"
+            "left": 2,
+            "width": 10,
+            "height": 400
           },
-          "widgetId": "widget_4",
+          "widgetId": "widget_2",
           "setting": {
-            "heightMode": "fit",
-            "maintainedByLayout": true
+            "heightMode": "fit"
           }
         },
         "1": {
           "type": "WIDGET",
           "bbox": {
-            "left": 3,
-            "width": 9,
-            "height": 400
+            "left": "0px",
+            "top": "NaNpx",
+            "width": "2px",
+            "height": "920px"
           },
-          "widgetId": "widget_3",
+          "widgetId": "widget_4",
           "setting": {
-            "heightMode": "fit"
+            "heightMode": "fit",
+            "maintainedByLayout": true
           }
         }
       }
@@ -76,29 +77,36 @@
     "layout_3": {
       "label": "DEFAULT",
       "order": [
-        "0",
-        "1"
+        "2",
+        "1",
+        "0"
       ],
       "content": {
         "0": {
           "type": "WIDGET",
           "bbox": {
-            "left": "9px",
-            "top": "-12px",
-            "width": "360px",
-            "height": "70px"
+            "width": 193.65625,
+            "height": 223
           },
           "widgetId": "widget_5"
         },
         "1": {
-          "widgetId": "widget_2",
+          "widgetId": "widget_3",
           "type": "WIDGET",
           "bbox": {
-            "left": "9px",
-            "top": "-12px",
+            "width": 193.65625,
+            "height": 55
+          }
+        },
+        "2": {
+          "type": "WIDGET",
+          "bbox": {
+            "left": "-81px",
+            "top": "-30px",
             "width": "360px",
             "height": "70px"
-          }
+          },
+          "widgetId": "widget_6"
         }
       }
     }
@@ -243,16 +251,6 @@
       }
     },
     "widget_2": {
-      "uri": "widgets/add-layers/",
-      "version": "1.0.0",
-      "label": "add-layers 1",
-      "config": {},
-      "id": "widget_2",
-      "useMapWidgetIds": [
-        "widget_3"
-      ]
-    },
-    "widget_3": {
       "uri": "widgets/arcgis/arcgis-map/",
       "version": "1.0.0",
       "label": "Map 1",
@@ -266,7 +264,7 @@
         "initialMapDataSourceID": "dataSource_1",
         "initialMapState": null
       },
-      "id": "widget_3",
+      "id": "widget_2",
       "layouts": {
         "MapFixedLayout": {
           "LARGE": "layout_2"
@@ -276,6 +274,16 @@
         {
           "dataSourceId": "dataSource_1"
         }
+      ]
+    },
+    "widget_3": {
+      "uri": "widgets/add-layers/",
+      "version": "1.0.0",
+      "label": "add-layers 1",
+      "config": {},
+      "id": "widget_3",
+      "useMapWidgetIds": [
+        "widget_2"
       ]
     },
     "widget_4": {
@@ -303,6 +311,19 @@
       }
     },
     "widget_5": {
+      "uri": "widgets/arcgis/map-layers/",
+      "version": "1.0.0",
+      "label": "Map Layers 1",
+      "config": {
+        "useMapWidget": true,
+        "setVisibility": true
+      },
+      "id": "widget_5",
+      "useMapWidgetIds": [
+        "widget_2"
+      ]
+    },
+    "widget_6": {
       "uri": "widgets/common/text/",
       "version": "1.0.0",
       "label": "Text 1",
@@ -314,7 +335,7 @@
           "wrap": true
         }
       },
-      "id": "widget_5"
+      "id": "widget_6"
     }
   },
   "widgetsManifest": {},
@@ -324,9 +345,9 @@
   "dataSources": {
     "dataSource_1": {
       "type": "WEB_MAP",
-      "itemId": "41281c51f9de45edaf1c8ed44bb10e30",
+      "itemId": "eb1be6543e304b4d81ed55439c412c2c",
       "id": "dataSource_1",
-      "label": "LA Parks and Trails Map (styled with popups)"
+      "label": "LA Parks and Trails Map Default"
     }
   },
   "messageConfigs": {},
