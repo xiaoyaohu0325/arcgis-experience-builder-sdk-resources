@@ -19,8 +19,8 @@
         "0": {
           "type": "WIDGET",
           "bbox": {
-            "left": "-211px",
-            "top": "-161px",
+            "left": "129px",
+            "top": "-110px",
             "width": "800px",
             "height": 520
           },
@@ -46,7 +46,7 @@
           "type": "WIDGET",
           "bbox": {
             "left": 0,
-            "width": 3,
+            "width": 2,
             "height": 500
           },
           "widgetId": "widget_2",
@@ -57,8 +57,8 @@
         "1": {
           "type": "WIDGET",
           "bbox": {
-            "left": 3,
-            "width": 9,
+            "left": 2,
+            "width": 10,
             "height": 400
           },
           "widgetId": "widget_3",
@@ -213,9 +213,9 @@
       }
     },
     "widget_2": {
-      "uri": "widgets/StarterWidget/",
+      "uri": "widgets/starter-widget/",
       "version": "1.0.0",
-      "label": "StarterWidget 1",
+      "label": "starter-widget 1",
       "config": null,
       "id": "widget_2"
     },
@@ -253,9 +253,9 @@
   "dataSources": {
     "dataSource_1": {
       "type": "WEB_MAP",
-      "itemId": "41281c51f9de45edaf1c8ed44bb10e30",
+      "itemId": "eb1be6543e304b4d81ed55439c412c2c",
       "id": "dataSource_1",
-      "label": "LA Parks and Trails Map (styled with popups)"
+      "label": "LA Parks and Trails Map Default"
     }
   },
   "messageConfigs": {},
