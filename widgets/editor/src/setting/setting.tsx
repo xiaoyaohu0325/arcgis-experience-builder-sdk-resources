@@ -17,24 +17,24 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, FormattedMessage } from "jimu-core";
-import { AllWidgetSettingProps } from "jimu-for-builder";
-import defaultMessages from "./translations/default";
+import { React } from 'jimu-core'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
+import defaultMessages from './translations/default'
 import {
   MapWidgetSelector,
-  SettingSection,
-} from "jimu-ui/advanced/setting-components";
+  SettingSection
+} from 'jimu-ui/advanced/setting-components'
 
 export default class Setting extends React.PureComponent<
-  AllWidgetSettingProps<{}>,
+  AllWidgetSettingProps<unknown>,
   any
 > {
   onMapWidgetSelected = (useMapWidgetIds: string[]) => {
     this.props.onSettingChange({
       id: this.props.id,
       useMapWidgetIds: useMapWidgetIds
-    });
-  };
+    })
+  }
 
   render() {
     return (
@@ -42,7 +42,7 @@ export default class Setting extends React.PureComponent<
         <SettingSection
           className="map-selector-section"
           title={this.props.intl.formatMessage({
-            id: "selectMapWidget",
+            id: 'selectMapWidget',
             defaultMessage: defaultMessages.selectMapWidget
           })}
         >
@@ -52,6 +52,6 @@ export default class Setting extends React.PureComponent<
           />
         </SettingSection>
       </div>
-    );
+    )
   }
 }

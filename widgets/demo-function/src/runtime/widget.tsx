@@ -17,12 +17,12 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { AllWidgetProps, React, IMState, FormattedMessage } from 'jimu-core';
-import { IMConfig } from '../config';
-import defaultMessage from './translations/default';
+import { type AllWidgetProps, React, type IMState, FormattedMessage } from 'jimu-core'
+import type { IMConfig } from '../config'
+import defaultMessage from './translations/default'
 
 interface ExtraProps {
-  locale: string;
+  locale: string
 }
 
 export default function Widget(props: AllWidgetProps<IMConfig> & ExtraProps) {
@@ -37,7 +37,7 @@ export default function Widget(props: AllWidgetProps<IMConfig> & ExtraProps) {
     <div>
       i18n: <FormattedMessage id="str1" defaultMessage={defaultMessage.str1}></FormattedMessage>
     </div>
-  </div>;
+  </div>
 }
 
 Widget.mapExtraStateProps = (state: IMState, ownProps: AllWidgetProps<IMConfig>): ExtraProps => {

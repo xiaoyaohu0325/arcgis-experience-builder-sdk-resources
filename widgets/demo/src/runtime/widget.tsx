@@ -18,35 +18,35 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import {React, FormattedMessage, defaultMessages as jimuCoreDefaultMessage, AllWidgetProps, css, jsx, styled} from 'jimu-core';
-import {IMConfig} from '../config';
-import { Tabs, Tab, Button} from 'jimu-ui';
-import defaultMessages from './translations/default';
+import { React, FormattedMessage, defaultMessages as jimuCoreDefaultMessage, type AllWidgetProps, css, jsx, styled } from 'jimu-core'
+import type { IMConfig } from '../config'
+import { Tabs, Tab, Button } from 'jimu-ui'
+import defaultMessages from './translations/default'
 
-export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, any>{
+export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, any> {
   nls = (id: string) => {
-    return this.props.intl ? this.props.intl.formatMessage({ id: id, defaultMessage: defaultMessages[id] }) : id;
+    return this.props.intl ? this.props.intl.formatMessage({ id: id, defaultMessage: defaultMessages[id] }) : id
   }
 
-  render(){
+  render() {
     const styleLiteral = css`
-      color: ${this.props.theme.colors.danger};
+      color: ${this.props.theme.sys.color.error.main};
       font-size: 1.25rem;
-    `;
+    `
 
     const styleObject = {
-      backgroundColor: this.props.theme.colors.palette.light[500],
+      backgroundColor: this.props.theme.ref.palette.neutral[500],
       padding: '1rem'
-    };
+    }
 
     const StyledButton = styled.button`
       color: white;
-      background-color: ${this.props.theme.colors.primary};
+      background-color: ${this.props.theme.sys.color.primary.main};
       transition: 0.15s ease-in all;
       &:hover {
-        background-color: ${this.props.theme.colors.danger};
+        background-color: ${this.props.theme.sys.color.error.main};
       }
-    `;
+    `
 
     const StyledBSButton = styled(Button)`
       background-color: hotpink !important;
@@ -55,24 +55,24 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
       &:hover {
         background-color: purple !important;
       }
-    `;
+    `
 
     const styleTag = `
       .danger-color {
         color: red;
       }
-    `;
+    `
 
     const rtlStyle = css`
       border: solid 1px;
       width: 100px;
       padding-left: 20px;
-    `;
+    `
 
     const propsTr = Object.keys(this.props).map((prop, i) => {
-      if(['manifest', 'user', 'intl'].indexOf(prop) > -1
-        || typeof this.props[prop] === 'string'){
-        return <tr key={i}><td>{prop}</td><td>{this.props[prop] && this.props[prop].toString()}</td></tr>;
+      if (['manifest', 'user', 'intl'].includes(prop) ||
+        typeof this.props[prop] === 'string') {
+        return <tr key={i}><td>{prop}</td><td>{this.props[prop] && this.props[prop].toString()}</td></tr>
       }
 
       return <tr key={i}>
@@ -81,30 +81,30 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
           {
             JSON.stringify(this.props[prop], null, 2)
           }
-        </td></tr>;
-    });
+        </td></tr>
+    })
 
-    return <div className="widget-demo jimu-widget" style={{overflow: 'auto'}}>
+    return <div className="widget-demo jimu-widget" style={{ overflow: 'auto' }}>
       <Tabs>
-        <Tab id="widgetProperties" title={this.nls('widgetProperties')} defaultActive={true}>
+        <Tab id="widgetProperties" title={this.nls('widgetProperties')}>
           <div className="title font-weight-bold">NLS messages from jimu-core (OK)</div>
           <div className="content"><FormattedMessage id="ok" defaultMessage={jimuCoreDefaultMessage.ok}></FormattedMessage></div>
-          <hr/>
+          <hr />
           {/* demo how to use theme variables */}
           <div css={styleLiteral}><span css={styleObject}>Theme danger color</span></div>
-          <br/>
+          <br />
 
           <StyledButton>A styled HTML Button</StyledButton>
-          <br/>
-          <br/>
+          <br />
+          <br />
 
           <StyledBSButton>A Re-styled Button Component</StyledBSButton>
-          <br/>
-          <br/>
+          <br />
+          <br />
 
           <div css={rtlStyle}>right to left demo</div>
-          <br/>
-          <br/>
+          <br />
+          <br />
 
           <style>
             {styleTag}
@@ -113,10 +113,10 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
             Text color is from a named CSS class
           </p>
           {/* demo how to format string by call API */}
-          <div className="title font-weight-bold"><FormattedMessage id="widgetName" defaultMessage={defaultMessages.widgetName}/></div>
-          <div className="content">{this.props.intl.formatMessage({id: '_widgetLabel', defaultMessage: defaultMessages._widgetLabel})}</div>
+          <div className="title font-weight-bold"><FormattedMessage id="widgetName" defaultMessage={defaultMessages.widgetName} /></div>
+          <div className="content">{this.props.intl.formatMessage({ id: '_widgetLabel', defaultMessage: defaultMessages._widgetLabel })}</div>
 
-          <div className="title font-weight-bold"><FormattedMessage id="widgetProps" defaultMessage={defaultMessages.widgetProps}/></div>
+          <div className="title font-weight-bold"><FormattedMessage id="widgetProps" defaultMessage={defaultMessages.widgetProps} /></div>
           <div className="content">
             <table>
               <tbody>{propsTr}</tbody>
@@ -127,6 +127,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
           <p>TODO</p>
         </Tab>
       </Tabs>
-    </div>;
+    </div>
   }
 }
